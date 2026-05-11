@@ -1,0 +1,27 @@
+Initial:
+XXXX
+XZ*X
+X*0X
+X*1X
+X*OX
+XXXX
+
+
+Step 1 : Right
+XXXX
+XZZX
+X*0X
+X*1X
+X*OX
+XXXX
+
+
+Step 2 : Down
+XXXX
+XZ*X
+X*0X
+X*1X
+X*ZX
+XXXX
+
+

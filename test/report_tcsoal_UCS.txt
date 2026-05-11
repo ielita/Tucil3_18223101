@@ -1,0 +1,90 @@
+Initial:
+XXXXXXX
+X0****X
+X**X**X
+X****OX
+X1***LX
+XZ**X*X
+XXXXXXX
+
+
+Step 1 : Right
+XXXXXXX
+X0****X
+X**X**X
+X****OX
+X1***LX
+XZ*ZX*X
+XXXXXXX
+
+
+Step 2 : Up
+XXXXXXX
+X0****X
+X**X**X
+X**Z*OX
+X1***LX
+XZ**X*X
+XXXXXXX
+
+
+Step 3 : Left
+XXXXXXX
+X0****X
+X**X**X
+XZ***OX
+X1***LX
+XZ**X*X
+XXXXXXX
+
+
+Step 4 : Up
+XXXXXXX
+XZ****X
+X**X**X
+X****OX
+X1***LX
+XZ**X*X
+XXXXXXX
+
+
+Step 5 : Down
+XXXXXXX
+X0****X
+X**X**X
+X****OX
+X1***LX
+XZ**X*X
+XXXXXXX
+
+
+Step 6 : Right
+XXXXXXX
+X0****X
+X**X**X
+X****OX
+X1***LX
+XZ*ZX*X
+XXXXXXX
+
+
+Step 7 : Up
+XXXXXXX
+X0****X
+X**X**X
+X**Z*OX
+X1***LX
+XZ**X*X
+XXXXXXX
+
+
+Step 8 : Right
+XXXXXXX
+X0****X
+X**X**X
+X****ZX
+X1***LX
+XZ**X*X
+XXXXXXX
+
+

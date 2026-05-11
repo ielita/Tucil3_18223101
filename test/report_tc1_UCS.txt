@@ -1,0 +1,32 @@
+Initial:
+XXXXX
+XZ*OX
+X*X*X
+X***X
+XXXXX
+
+
+Step 1 : Down
+XXXXX
+XZ*OX
+X*X*X
+XZ**X
+XXXXX
+
+
+Step 2 : Right
+XXXXX
+XZ*OX
+X*X*X
+X**ZX
+XXXXX
+
+
+Step 3 : Up
+XXXXX
+XZ*ZX
+X*X*X
+X***X
+XXXXX
+
+

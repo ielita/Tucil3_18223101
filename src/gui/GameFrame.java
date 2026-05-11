@@ -11,6 +11,8 @@ public class GameFrame extends JFrame {
     private Map map;
     private List<SlidingState> solutionPath;
     private int currStep = 0;
+    private long lastExecutionTime = 0;
+    private int iterCounts = 0;
 
     private MatrixPanel matrixPanel;
     private JLabel lblStatus;
@@ -78,13 +80,14 @@ public class GameFrame extends JFrame {
             long startTime = System.currentTimeMillis();
             solutionPath = solver.solve(map, selectedAlgo);
             long endTime = System.currentTimeMillis();
-            long executionTime = endTime - startTime;
+            lastExecutionTime = endTime - startTime;
 
             if (solutionPath != null) {
                 currStep = 0;
                 updateDisplay();
 
                 int totalIterations = solver.getIterations();
+                iterCounts = totalIterations;
                 int totalCost = solutionPath.get(solutionPath.size() - 1).totalACost;
                 int totalSteps = solutionPath.size() - 1;
                 
@@ -96,7 +99,7 @@ public class GameFrame extends JFrame {
                     "Path Length  : %d steps\n" +
                     "Total Cost      : %d\n\n" +
                     "Save results to file .txt?",
-                    selectedAlgo, executionTime, totalIterations, totalSteps, totalCost
+                    selectedAlgo, lastExecutionTime, totalIterations, totalSteps, totalCost
                 );
                 int confirm = JOptionPane.showConfirmDialog(this, 
                     detailMessage,
@@ -107,7 +110,7 @@ public class GameFrame extends JFrame {
                 if (confirm == JOptionPane.YES_NO_OPTION) {
                     String outputFileName = JOptionPane.showInputDialog(this, "Insert file name:");
                     if (outputFileName != null && !outputFileName.trim().isEmpty()) {
-                        solver.saveFullReport(outputFileName, selectedAlgo, executionTime, solutionPath, map);
+                        solver.saveFullReport(outputFileName, selectedAlgo, lastExecutionTime, solutionPath, map);
                         JOptionPane.showMessageDialog(this, "File saved at path: test/" + outputFileName + ".txt");
                     }
                 }
@@ -234,13 +237,17 @@ public class GameFrame extends JFrame {
         String selectedAlgo = (String) comboAlgo.getSelectedItem();
         String info = String.format(
             "<html><div style='padding: 5px;'>" +
-            "<b>Path Found! ^-^)/</b><br><br>" +
+            "<b>Path Found! ^-^)/</b><br>" +
             "Algorithm (%s)<br>" +
+            "Execution Time: %d ms<br>" +
+            "Iterations: %d iterations<br>" +
             "Step: %d / %d<br>" +
             "Path Length  : %d steps<br>" +
             "Total Cost    : %d" +
             "</div></html>",
             selectedAlgo,
+            lastExecutionTime,
+            iterCounts,
             currStep, 
             solutionPath.size() - 1,
             currStep,
@@ -250,3 +257,4 @@ public class GameFrame extends JFrame {
         matrixPanel.repaint();
     }
 }
+

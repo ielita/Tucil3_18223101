@@ -1,0 +1,16 @@
+Initial:
+XXXXX
+XZ*OX
+X*X*X
+X***X
+XXXXX
+
+
+Step 1 : Right
+XXXXX
+XZ*ZX
+X*X*X
+X***X
+XXXXX
+
+
